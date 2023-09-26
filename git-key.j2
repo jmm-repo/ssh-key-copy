@@ -1,0 +1,5 @@
+ssh-keygen -t rsa -b 4096 -C "{{email address}}" -N "" -f ~/.ssh/{{filename}}
+chmod 644 ~/.ssh/{{filename}}.pub
+chmod 600 ~/.ssh/{{filename}}
+ssh-add ~/.ssh/{{filename}}
+cat ~/.ssh/{{filename}}.pub |pbcopy
